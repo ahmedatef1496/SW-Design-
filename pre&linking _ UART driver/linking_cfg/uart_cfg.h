@@ -71,6 +71,13 @@ typedef enum
 } en_UART_N_STOP_BITS_t;
 
 
+typedef enum
+{
+	TRANSMITTER  ,
+	RECEIVER	   ,
+	TRANSCEIVER
+}en_UART_Device_role_t;
+
 typedef struct{
 	en_UART_SPEED_MODE_t     SPEED_MODE ;
 	en_UART_CPU_F_t          CPU_F ;
