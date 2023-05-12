@@ -14,6 +14,7 @@
 const ST_UART_cfg UART_cfg[TOTAL_DEVICES];
 /**********************************************************************************************************************
  *  device 0 configuration
+ // #define  Device_role        TRANSMITTER
  // #define  SPEED_MODE         NORMAL_SPEED
  // #define  CPU_F               _16_MHZ
  // #define  BUAD_RATE          BAUD_9600
@@ -24,6 +25,14 @@ const ST_UART_cfg UART_cfg[TOTAL_DEVICES];
  *********************************************************************************************************************/
 UART_cfg[DEVICE_0]=
 { 
+/*****************************_SELECT_Device_role_********************************/
+/*
+ *	TO  SELECT Device role for uart DEVICE
+ *		option 1 			-> 	TRANSMITTER  
+ *		option 2 			->      RECEIVER		
+ *		option 3 			-> 	TRANSCEIVER	
+ */
+	.Device_role=TRANSMITTER,
 /*****************************_SELECT_SPEED_MODE_********************************/
 /*
  *	TO  SELECT SPEED MODE for uart
