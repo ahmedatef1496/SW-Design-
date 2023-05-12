@@ -24,6 +24,14 @@ const ST_UART_cfg UART_cfg[TOTAL_DEVICES];
  *********************************************************************************************************************/
 UART_cfg[DEVICE_0]=
 { 
+/*****************************_SELECT_Device_role_********************************/
+/*
+ *	TO  SELECT SPEED MODE for uart
+ *		option 1 			-> 		   
+ *		option 2 			-> 		
+  *		option 3 			-> 		
+ */
+	.SPEED_MODE=NORMAL_SPEED,
 /*****************************_SELECT_SPEED_MODE_********************************/
 /*
  *	TO  SELECT SPEED MODE for uart
