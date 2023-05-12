@@ -79,6 +79,7 @@ typedef enum
 }en_UART_Device_role_t;
 
 typedef struct{
+	en_UART_Device_role_t    Device_role
 	en_UART_SPEED_MODE_t     SPEED_MODE ;
 	en_UART_CPU_F_t          CPU_F ;
 	en_UART_BUAD_RATE_t      BUAD_RATE;
@@ -86,6 +87,7 @@ typedef struct{
 	en_UART_SYNCH_MODE_t     PARITY_MODE;
 	en_UART_N_DATA_BITS_t    N_DATA_BITS;
 	en_UART_N_STOP_BITS_t    N_STOP_BITS;
+	
 }ST_UART_cfg;
 
 
