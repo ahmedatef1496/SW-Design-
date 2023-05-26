@@ -38,9 +38,9 @@ int main(void)
       
 		BCM_TxDispatcher_v2();
 		
-		_delay_ms(1);
-
 		
+
+	_delay_ms(1);	
 	}
 
 }

@@ -48,8 +48,8 @@ u8 *Pu8_g_TX_STR,*Pu8_g_RX_STR;
 /*                                                                      */
 /************************************************************************/
 enuErrorStatus_t BCM_Init(strBCMCfg_t *strBCMCfg)
-
-{   BCM_UART_setter(gstrBCMHandeler.strBCMTaskCfg->pu8_DataBuffer);
+{  
+	 BCM_UART_setter(gstrBCMHandeler.strBCMTaskCfg->pu8_DataBuffer);
 	/* variable to hold the status of the function (E_OK, E_ERROR) and return it */
 	enuErrorStatus_t enuErrorStatus;
 	/* if the input pointer equals null */
@@ -121,7 +121,6 @@ enuErrorStatus_t BCM_Init(strBCMCfg_t *strBCMCfg)
 	gu8BCMInitState = HIGH;
 	return enuErrorStatus;
 }//end BCM_Init
-
 enuErrorStatus_t BCM_Setup(strBCMTaskCfg_t *pstrBCMTaskCfg)
 { 
 	
@@ -233,7 +232,6 @@ enuErrorStatus_t BCM_TxDispatcher_v2(void)
 
 
 }
-
 enuErrorStatus_t BMC_RxDispatcher()
 {
 	/* variable to hold the status of the function (E_OK, E_ERROR) and return it */
@@ -332,10 +330,6 @@ static void BCM_SendByte(u16 u16Data)
 	}//end else
 }//end BCM_SendByte
 
-
-
-
-
 /* private function to receive byte */
 static void BCM_ReceiveByte(u16* pu16Data)
 {
@@ -366,15 +360,11 @@ static void BCM_ReceiveByte(u16* pu16Data)
 		
 	}//end else
 }//end BCM_ReceiveByte
-
-
 static void BCM_TxHandler(void)
 {
 	/* update the TX global flag to be HIGH */
 	gu8TX_Flag = HIGH;
 }//end BCM_TxHandler
-
-
  void UART_SendDispatcher()    //Ashync_V2  should be in while sami asych
  { 
 	 static u8 i=0;
@@ -391,14 +381,11 @@ static void BCM_TxHandler(void)
 	 
 
  }
- 
  void BCM_UART_setter(u8*str)
  {
 	 Pu8_g_TX_STR=str;
 	
  }
- 
- 
  
  /************************************/
  static void BCM_RxHandler(void)

@@ -222,9 +222,9 @@ Disassembly of section .text:
  194:	08 95       	ret
 
 00000196 <BCM_UART_setter>:
+	 
 
  }
- 
  void BCM_UART_setter(u8*str)
  {
 	 Pu8_g_TX_STR=str;
@@ -233,16 +233,17 @@ Disassembly of section .text:
  19e:	08 95       	ret
 
 000001a0 <BCM_Init>:
+
 /************************************************************************/
 /*                                                                      */
 /************************************************************************/
 enuErrorStatus_t BCM_Init(strBCMCfg_t *strBCMCfg)
-
-{   BCM_UART_setter(gstrBCMHandeler.strBCMTaskCfg->pu8_DataBuffer);
+{  
  1a0:	1f 93       	push	r17
  1a2:	cf 93       	push	r28
  1a4:	df 93       	push	r29
  1a6:	ec 01       	movw	r28, r24
+	 BCM_UART_setter(gstrBCMHandeler.strBCMTaskCfg->pu8_DataBuffer);
  1a8:	e0 91 b9 00 	lds	r30, 0x00B9	; 0x8000b9 <gstrBCMHandeler>
  1ac:	f0 91 ba 00 	lds	r31, 0x00BA	; 0x8000ba <gstrBCMHandeler+0x1>
  1b0:	82 81       	ldd	r24, Z+2	; 0x02
