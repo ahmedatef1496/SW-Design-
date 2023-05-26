@@ -1,4 +1,8 @@
- # Proiect_map
+# BCM (Basic Communication Manager)
+#### Embedded SW Dynamic Design
+#### Author: Ahmed Atef
+
+# Proiect_map
 | File                  | Link                                                                           
 | --------------------- | ------------------------------------------------------------------------------ |
 | RX MCU file                   | [RX](https://github.com/ahmedatef1496/SW-Design-/tree/main/Dynamic%20Design/BCM/BCM_R)  |    
