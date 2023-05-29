@@ -20,5 +20,3 @@ MCAL\timers\timer.c
 
 os\os.c
 
-os\os_tasks.c
-

@@ -27,9 +27,14 @@ typedef struct
 
 typedef enum{
 	 OS_OK,
-	 OS_ERROR
+	 OS_ERROR,
+	 PRIORITY_EMPTY,
+	 PRIORITY_FULL,
+	 OS_INIT,
+	 OS_TASK_ADDED,
+	 OS_TASK_DELETED
 	 
-}enuErrorStatus_t ;
+}enuOSErrorStatus_t ;
 
 
 
@@ -37,15 +42,15 @@ typedef enum{
 /*************************************************************************************************
 * Description     : A function to initialize the timer used in OS
 *************************************************************************************************/
-void OS_Init();
+enuOSErrorStatus_t OS_Init();
 /*************************************************************************************************
 * Description     : A function to create a certain task
 *************************************************************************************************/
-enuErrorStatus_t OS_CreateTask(u8 u8Priority, strOSConfigTask_t* strSOSConfigTask);
+enuOSErrorStatus_t OS_CreateTask(u8 u8Priority, strOSConfigTask_t* strSOSConfigTask);
 /*************************************************************************************************
 * Description     : A function to delete a certain task
 *************************************************************************************************/
-void OS_DeleteTask(u8 u8Priority);
+enuOSErrorStatus_t OS_DeleteTask(u8 u8Priority);
 /*************************************************************************************************
 * Description     : A function to run task(s) using the OS
 *************************************************************************************************/
@@ -53,11 +58,11 @@ void OS_Run(void);
 /*************************************************************************************************
 * Description     : A function to D initialize the timer used in OS
 *************************************************************************************************/
-void OS_DInit();
+enuOSErrorStatus_t OS_DInit();
 /*************************************************************************************************
 * Description     : A function to modify a certain task
 *************************************************************************************************/
-enuErrorStatus_t OS_modify_task(u8 u8Priority, strOSConfigTask_t* strSOSConfigTask);
+enuOSErrorStatus_t OS_modify_task(u8 u8Priority, strOSConfigTask_t* strSOSConfigTask);
 /*************************************************************************************************
 * Description     : A function to stop  os
 *************************************************************************************************/

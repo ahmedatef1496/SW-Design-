@@ -9,7 +9,7 @@
 #ifndef OS_CFG_H_
 #define OS_CFG_H_
 
-#define NO_OF_TASKS      3
+#define NO_OF_TASKS      10
 
 
 
