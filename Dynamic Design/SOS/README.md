@@ -10,5 +10,10 @@
 | Simulation                    | [Simulation](https://github.com/ahmedatef1496/SW-Design-/tree/main/Dynamic%20Design/SOS/simulation ) |
 | Project Video                 | [uploading]()|
 
+
 ## Simulation Schematic
-![CircuitSchematic](https://github.com/ahmedatef1496/SW-Design-/blob/main/Dynamic%20Design/SOS/sos_sim.PNG)
+
+<p align="center">
+ ![CircuitSchematic](https://github.com/ahmedatef1496/SW-Design-/blob/main/Dynamic%20Design/SOS/sos_sim.PNG)
+</p>
+
