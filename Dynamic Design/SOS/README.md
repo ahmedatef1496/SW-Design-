@@ -14,6 +14,6 @@
 ## Simulation Schematic
 
 <p align="center">
- ![CircuitSchematic](https://github.com/ahmedatef1496/SW-Design-/blob/main/Dynamic%20Design/SOS/sos_sim.PNG)
+  <img width="460" height="300" src="(https://github.com/ahmedatef1496/SW-Design-/blob/main/Dynamic%20Design/SOS/sos_sim.PNG">
 </p>
 
