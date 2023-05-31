@@ -12,8 +12,8 @@
 #include "../MCAL/dio/dio.h"
 #include "../MCAL/timers/timer.h"
 #include "os_cfg.h"
-#include "../HAL/lcd/lcd.h"
 #include "../MCAL/Interrupt/exi.h"
+#include "../HAL/button/button.h"
 
 /*- STRUCTS AND UNIONS -------------------------------------*/
 typedef struct
@@ -32,6 +32,7 @@ typedef enum{
 	 PRIORITY_FULL,
 	 OS_INIT,
 	 OS_TASK_ADDED,
+	 OS_TASK_MODIFED,
 	 OS_TASK_DELETED
 	 
 }enuOSErrorStatus_t ;

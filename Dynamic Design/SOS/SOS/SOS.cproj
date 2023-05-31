@@ -120,13 +120,16 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="app\app.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="app\app.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="HAL\button\button.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="HAL\button\button_config.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="HAL\button\button_interface.h">
+    <Compile Include="HAL\button\button.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="HAL\lcd\lcd.c">
@@ -207,6 +210,7 @@
     <Folder Include="MCAL\dio\" />
     <Folder Include="MCAL\Interrupt\" />
     <Folder Include="MCAL\timers\" />
+    <Folder Include="app" />
     <Folder Include="os" />
     <Folder Include="SERVIES\" />
   </ItemGroup>

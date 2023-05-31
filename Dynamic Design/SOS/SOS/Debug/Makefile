@@ -40,12 +40,14 @@ SUBDIRS :=  \
 ../MCAL/dio/ \
 ../MCAL/Interrupt/ \
 ../MCAL/timers/ \
+../app \
 ../os \
 ../SERVIES/
 
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
+../app/app.c \
 ../HAL/button/button.c \
 ../HAL/lcd/lcd.c \
 ../main.c \
@@ -64,6 +66,7 @@ ASM_SRCS +=
 
 
 OBJS +=  \
+app/app.o \
 HAL/button/button.o \
 HAL/lcd/lcd.o \
 main.o \
@@ -75,6 +78,7 @@ MCAL/timers/timer.o \
 os/os.o
 
 OBJS_AS_ARGS +=  \
+app/app.o \
 HAL/button/button.o \
 HAL/lcd/lcd.o \
 main.o \
@@ -86,6 +90,7 @@ MCAL/timers/timer.o \
 os/os.o
 
 C_DEPS +=  \
+app/app.d \
 HAL/button/button.d \
 HAL/lcd/lcd.d \
 main.d \
@@ -97,6 +102,7 @@ MCAL/timers/timer.d \
 os/os.d
 
 C_DEPS_AS_ARGS +=  \
+app/app.d \
 HAL/button/button.d \
 HAL/lcd/lcd.d \
 main.d \
@@ -121,6 +127,13 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
+app/app.o: ../app/app.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
 HAL/button/button.o: ../HAL/button/button.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
