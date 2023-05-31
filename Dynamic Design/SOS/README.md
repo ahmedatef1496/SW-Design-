@@ -1,15 +1,14 @@
-# BCM (Basic Communication Manager)
+# SOS (Small Oprating System)
 #### Embedded SW Dynamic Design
 #### Author: Ahmed Atef
 
 # Proiect_map
 | File                  | Link                                                                           
 | --------------------- | ------------------------------------------------------------------------------ |
-| RX MCU file                   | [RX](https://github.com/ahmedatef1496/SW-Design-/tree/main/Dynamic%20Design/BCM/BCM_R)  |    
-| TX MCU file                   | [TX](https://github.com/ahmedatef1496/SW-Design-/tree/main/Dynamic%20Design/BCM/BCM_S)  |
-| documentation                 | [uploading]() |                                          | 
-| Simulation                    | [Simulation](https://github.com/ahmedatef1496/SW-Design-/tree/main/Dynamic%20Design/BCM/simulation ) |
+| MCU file                   | [SOS.hex]()  |
+| documentation                 | [design](https://github.com/ahmedatef1496/SW-Design-/tree/main/Dynamic%20Design/SOS/design) |            | 
+| Simulation                    | [Simulation](https://github.com/ahmedatef1496/SW-Design-/tree/main/Dynamic%20Design/SOS/simulation ) |
 | Project Video                 | [uploading]()|
 
 ## Simulation Schematic
-![CircuitSchematic](https://github.com/ahmedatef1496/SW-Design-/blob/main/Dynamic%20Design/bcm.PNG)
+![CircuitSchematic](https://github.com/ahmedatef1496/SW-Design-/blob/main/Dynamic%20Design/SOS/sos_sim.PNG)
