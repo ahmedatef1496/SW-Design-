@@ -14,6 +14,6 @@
 ## Simulation Schematic
 
 <p align="center">
-  <img width="800" height="500" src="https://github.com/ahmedatef1496/SW-Design-/blob/main/Dynamic%20Design/SOS/sos_sim.PNG">
+  <img width="800" height="700" src="https://github.com/ahmedatef1496/SW-Design-/blob/main/Dynamic%20Design/SOS/sos_sim.PNG">
 </p>
 
