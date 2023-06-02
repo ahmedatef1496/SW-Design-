@@ -87,7 +87,11 @@ void timer_reset()
 	TCNT0 = 0;
 
 }
+void timer0_stop()
+{
+	TCCR0 &= 0x00;
 
+}
 /* Timer 0 Call Back functions*/
 
 void TIMER0_OV_SetCallBack(void(*LocalFptr)(void))

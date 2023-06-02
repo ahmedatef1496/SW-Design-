@@ -17,9 +17,13 @@ typedef enum en_ButtonError_t
 }en_buttonError_t;
 
 
-#define  button0 PIND0
+#define  button0 PINC4
 #define  button1 PIND1
 #define  button3 PIN
+#define  led0    PINB4
+#define  led1    PINB5
+#define  led2    PINB6
+#define  led3    PINB7
 
 typedef enum { NPRESSED  , PRESSED} enuButtonStatus_t;
 

@@ -15,7 +15,7 @@
 static enuOSErrorStatus_t OS_IsPriorityEmpty(strOSConfigTask_t* strOSConfigTask);
 
 static void OS_TimerCallback(void);
-
+ static void OS_Start_Check_pd ();
 
 /*-------------------------GLOBAL STATIC VARIABLES -------------------------*/
 static strOSConfigTask_t gastrOSConfigTasks[NO_OF_TASKS];
@@ -67,7 +67,7 @@ enuOSErrorStatus_t OS_Init()
 		 	TIMER0_Init(TIMER0_NORMAL_MODE);
 		 	TIMER0_OV_InterruptEnable();
 		 	TIMER0_OV_SetCallBack(OS_TimerCallback);
-		 	timer_start(TIMER0_SCALER_64);
+		 //	timer_start(TIMER0_SCALER_64);
 			 
 			  return OS_INIT;
 	}
@@ -119,11 +119,11 @@ enuOSErrorStatus_t OS_modify_task(u8 u8Priority, strOSConfigTask_t* strOSConfigT
 void OS_Run(void)
 {
 	u8 u8TaskP;
-	
+	 timer_start(TIMER0_SCALER_64);
 	while(1)
 	{   
          /* Checking if start flag is raised */
-		 OS_Start_Check ();
+		 OS_Start_Check_pd ();
 		/* Checking if the ISR flag is raised */
 		if(gu8TFlag == HIGH&&gu8os_flag==HIGH)  //100ms
 		{
@@ -177,7 +177,8 @@ enuOSErrorStatus_t OS_DeleteTask(u8 u8Priority)
 	 if (states==LOW)
 	 {
 		 DIO_writepin(PINB2,HIGH);
-		 gu8os_flag=1;
+		 gu8os_flag=HIGH;
+		 timer_start(TIMER0_SCALER_64);
 		 
 		 while(gu8os_flag==LOW)
 		 {
@@ -187,9 +188,27 @@ enuOSErrorStatus_t OS_DeleteTask(u8 u8Priority)
  } 
 void OS_disable()
  {
-	 gu8os_flag=0;
-	 DIO_writepin(PINB2,LOW);
-	/* LCD_Clear();*/
+	 gu8os_flag=LOW;
+	 DIO_writepin(PINB0,LOW);
+	 timer0_stop();
+
 	 
 	 
  }
+ 
+  static void OS_Start_Check_pd ()
+  {
+	  u8 states;
+	BUTTON_read(button0,&states);
+	if (states==HIGH)
+	{
+			 DIO_writepin(PINB0,HIGH);
+			 gu8os_flag=HIGH;
+			 timer_start(TIMER0_SCALER_64);
+
+		while(states==HIGH)
+		{
+			BUTTON_read(button0,&states);
+		}
+	}
+  }

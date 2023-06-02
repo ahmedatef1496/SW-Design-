@@ -120,6 +120,7 @@ void TIMER0_OV_InterruptDisable(void);
 void TIMER0_OV_SetCallBack(void(*LocalFptr)(void));
 u32 set_time (u16 PRE_SCALER,f64 DesiedTime);
 void timer_delay(u16 Delay);
+void timer0_stop();
 /////////////////////////////////////////////////////////////////
 typedef enum{
 	TIMER1_STOP=0,
