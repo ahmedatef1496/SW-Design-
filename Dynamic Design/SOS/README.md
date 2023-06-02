@@ -1,6 +1,5 @@
 # SOS (Small Oprating System)
 #### Embedded SW Dynamic Design
-#### Author: Ahmed Atef
 
 # Proiect_map
 | File                  | Link                                                                           
